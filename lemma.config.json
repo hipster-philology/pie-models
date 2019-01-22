@@ -1,0 +1,65 @@
+{
+  "input_path": "datasets/UD/UD_French-Spoken/fr_spoken-ud-train.conllu",
+  "dev_path": "datasets/UD/UD_French-Spoken/fr_spoken-ud-dev.conllu",
+
+  "modelname": "lemma",
+  "modelpath": "french.lemma",
+  "word_max_size": 50000,
+
+  "max_sent_len": 35,
+  "tasks": [
+    {
+      "name": "lemma",
+      "target": true,
+      "context": "sentence",
+      "level": "char",
+      "decoder": "attentional",
+      "settings": {
+        "bos": true,
+        "eos": true,
+        "lower": true,
+        "target": "lemma"
+      },
+      "layer": -1
+    }
+  ],
+  "include_lm": false,
+  /** "lm_shared_softmax": true, */
+  /** "lm_schedule": { */
+  /**   "patience": 2, */
+  /**   "factor": 0.5, */
+  /**   "weight": 0.2, */
+  /**   "mode": "min" */
+  /** }, */
+  "batch_size": 25,
+  "patience": 5,
+  "factor": 0.5,
+  "epochs": 100,
+
+  "dropout": 0.25,
+  "lr": 0.001,
+  "lr_factor": 0.75,
+  "lr_patience": 2,
+  "optimizer": "Adam",
+  "clip_norm": 5,
+
+  "cell": "GRU",
+  "num_layers": 1,
+  "hidden_size": 150,
+  "wemb_dim": 0,
+  "cemb_dim": 300,
+  "cemb_type": "rnn",
+  "cemb_layers": 2,
+  "checks_per_epoch": 1,
+  "report_freq": 10,
+
+  "device": "cpu",
+  "char_max_size": 500,
+  "char_min_freq": 1,
+  "word_min_freq": 1,
+
+  "pretrain_embeddings": false,
+  "load_pretrained_embeddings": "",
+  "load_pretrained_encoder": "",
+  "freeze_embeddings": false
+}
