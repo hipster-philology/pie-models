@@ -25,8 +25,8 @@ Models are arranged by language. **TODO**: add a json documentation file per mod
     
     Target task: lemma. 
     Accuracy on test data
-      lemma: 0.943
-      pos: 0.9498
+      lemma: 0.9383
+      pos: 0.9473
 
 `model_fro_poslemmesmorph.tar`: POS-tagger, lemmatizer and morphological analyzer trained on the Geste corpus
 
