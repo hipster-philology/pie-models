@@ -28,6 +28,13 @@ Models are arranged by language. **TODO**: add a json documentation file per mod
       lemma: 0.9383
       pos: 0.9473
 
+`fro-poslemmes_cat-lemma-2019_01_23-00_34_12`: same as the previous one, but using pre-trained word embeddings from a large unlabelled corpus.
+
+    Target task: lemma. 
+    Accuracy on test data
+      lemma: 0.9409
+      pos: 0.9468
+
 `model_fro_poslemmesmorph.tar`: POS-tagger, lemmatizer and morphological analyzer trained on the Geste corpus
 
 ### Latin (lat)
