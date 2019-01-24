@@ -34,6 +34,13 @@ Models are arranged by language. **TODO**: add a json documentation file per mod
     Accuracy on test data
       lemma: 0.9409
       pos: 0.9468
+      
+`fro-poslemmes_cat-lemma-2019_01_24-00_05_57.tar`: same as the previous one, but using convolutions (`cnn`) for the character embeddings.
+
+    Target task: lemma. 
+    Accuracy on test data
+      lemma: 0.9462
+      pos: 0.9509
 
 `model_fro_poslemmesmorph.tar`: POS-tagger, lemmatizer and morphological analyzer trained on the Geste corpus
 
